@@ -1,0 +1,27 @@
+@import url('reset.css');
+
+/* General Demo Style */
+body{
+
+}
+a{
+	color:#000;
+	text-decoration:none;
+}
+.clr{
+	clear:both;
+}
+
+/*my name part top part*/
+h5{
+	font-size:44px;
+	color:#000;
+	text-align:center;
+}
+
+/* with jquery ----this part and h5? */
+h1 span, h5{
+	font-size:20px;
+	display:block;
+	color:#60817a;
+}
