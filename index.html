@@ -22,7 +22,6 @@
 <body>
 <div class="container">
 <!-- first section -->
-
 <div id="wrapper">
   <div id="scroller">  
   	<div class="section" id="intro">
@@ -40,12 +39,12 @@
 	  	<img width="150px" data-stellar-ratio="-1.5" class="drop10" src="images/objects.svg" >
 
 
-		<p>Hello company!!! <br />
+		<p>Hello <span id='company'>company</span>!!! <br />
 I am Eung Jin lee. Just call me Jin.<br />
 I figured you guys read boring resumes all the time, <br />
 so I dared to be different but here it is just in case - <a href="https://dl.dropboxusercontent.com/u/11466967/EungJIn%20Lee%20Resume%20ver%201.1.pdf">THIS BORING RESUME IN PDF.</a> <br />
 I recently graduated from college.<br />
-Which means I am at the starting point. I have a little job experience, but I can proudly say that I am a person with a capability of accepting and absorbing all the knowledge that I will get from working at company<br />
+Which means I am at the starting point. I have a little job experience, but I can proudly say that I am a person with a capability of accepting and absorbing all the knowledge that I will get from working at <span id='company2'>company</span><br />
 
 I am eager to learn, passionate, and hungry for more.<br />
 Someone wise once said<br />
@@ -62,13 +61,13 @@ In that light, I have a lot to offer.</p>
    		HTML5, CSS3, javascript, PHP <br />
    		RUBY, Git <br />
    		</p>
-   		<h1 class="big">Why company?</h1>
+   		<h1 class="big" id='company3'>Why compan?</h1>
    		<p class="center">
-Hi again, company!<br />
+Hi again, <span id='company4'>company4</span>!<br />
 <br />
-Before you go through my portfolio, I want to express that I am extremely interested in your company, and I believe I am a perfect fit. My experience of exploring new ideas and creating them into reality aligns with the vision of company, and I want to be a contributing member of your team. <br />
+Before you go through my portfolio, I want to express that I am extremely interested in your <span id='company5'>company5</span>, and I believe I am a perfect fit. My experience of exploring new ideas and creating them into reality aligns with the vision of <span id='company6'>company6</span>, and I want to be a contributing member of your team. <br />
 <br />
-As a child, I was always designing, creating, and finding ways to implement my ideas. When I found company, I was surprised and excited to know that there was a way to pursue my dream for inventing. In my portfolio, I have included some of my ideas and projects that I have tried in the past. I hope you can see my potential and my passion, and find them exciting as I do. I hope to have an opportunity to join company and be able to show my creativity, utilize my experience, and share my ideas with your company.<br />
+As a child, I was always designing, creating, and finding ways to implement my ideas. When I found <span id='company7'>company7</span>, I was surprised and excited to know that there was a way to pursue my dream for inventing. In my portfolio, I have included some of my ideas and projects that I have tried in the past. I hope you can see my potential and my passion, and find them exciting as I do. I hope to have an opportunity to join <span id='company8'>company8</span> and be able to show my creativity, utilize my experience, and share my ideas with your <span id='company9'>company9</span>.<br />
 <br />
 Thank you for taking the time to read, and thank you for being an amazing avenue for modern inventors.<br />
 
@@ -361,6 +360,28 @@ $(function(){
 	$('header nav ul').onePageNav();
 });
 </script>
-    
+<script  type="text/javascript">
+var qs = (function(a) {
+    if (a == "") return {};
+    var b = {};
+    for (var i = 0; i < a.length; ++i)
+    {
+        var p=a[i].split('=');
+        if (p.length != 2) continue;
+        b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+    }
+    return b;
+})(window.location.search.substr(1).split('&'));
+
+	document.getElementById("company").innerHTML = qs["compN"];
+	document.getElementById("company2").innerHTML = qs["compN"];
+	document.getElementById("company3").innerHTML = "Why " +qs["compN"] +"?";
+	document.getElementById("company4").innerHTML = qs["compN"];
+	document.getElementById("company5").innerHTML = qs["compN"];
+	document.getElementById("company6").innerHTML = qs["compN"];
+	document.getElementById("company7").innerHTML = qs["compN"];
+	document.getElementById("company8").innerHTML = qs["compN"];
+	document.getElementById("company9").innerHTML = qs["compN"];
+</script>   
 </body>
 </html>
